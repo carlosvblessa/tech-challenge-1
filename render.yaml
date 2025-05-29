@@ -17,7 +17,8 @@ services:
       - key: URL_SITE_EMBRAPA
         value: "http://vitibrasil.cnpuv.embrapa.br/index.php"
 
-      # injeta a connection string completa do banco
+      # Injeta a connection string completa do banco
       - key: DATABASE_URL
         fromDatabase:
-          connectionString: vitivinicultura-db
+          name: vitivinicultura-db
+          property: connectionString
