@@ -16,7 +16,8 @@ COPY . .
 RUN chmod +x /app/entrypoint.sh
 
 # Expõe a porta
-EXPOSE 8000
+ARG PORT=8000
+EXPOSE ${PORT}
 
 # Define variáveis de ambiente padrão do DB (podem ser sobrescritas no compose)
 ENV DB_HOST=db
