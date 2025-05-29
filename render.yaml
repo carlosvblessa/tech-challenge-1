@@ -13,9 +13,11 @@ services:
     plan: free
     dockerfilePath: Dockerfile-app
 
-    databases:
-      - vitivinicultura-db
-
     envVars:
       - key: URL_SITE_EMBRAPA
         value: "http://vitibrasil.cnpuv.embrapa.br/index.php"
+
+      # injeta a URL do banco gerenciado no serviço
+      - key: DATABASE_URL
+        fromDatabase:
+          name: vitivinicultura-db
