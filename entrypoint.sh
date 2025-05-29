@@ -5,6 +5,7 @@ echo "🔌 Aguardando o Postgres via DATABASE_URL..."
 until psql "$DATABASE_URL" -c '\q'; do
   sleep 1
 done
+
 echo "✅ Postgres disponível!"
 
 echo "📦 Aplicando migrações Alembic..."
