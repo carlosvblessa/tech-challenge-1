@@ -12,5 +12,6 @@ echo "✅ Postgres disponível!"
 echo "📦 Aplicando migrações Alembic..."
 alembic upgrade head
 
-# 3) Inicia a aplicação
-exec uvicorn src.main:app --host 0.0.0.0 --port 8000
+# define porta padrão se não existir (poderia vir como 8000 em dev)
+: "${PORT:=8000}"
+exec uvicorn src.main:app --host 0.0.0.0 --port "$PORT"
