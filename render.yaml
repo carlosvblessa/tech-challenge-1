@@ -1,6 +1,6 @@
 databases:
   - name: vitivinicultura-db
-    engine: postgres
+    type: postgres
     plan: free
     region: oregon
 
