@@ -29,8 +29,10 @@ class ProcessamentoService(BaseService):
 
     def _transformar_json_para_modelo(self, dados_json: dict) -> Processamento:
         categorias = []
-
-        for item in dados_json["Cultivar"]:
+      
+        itens = dados_json.get("Cultivar") or dados_json.get("Sem definicao", [])
+      
+        for item in itens:
             categoria = next(k for k in item if k != "TIPOS")
             quantidade = item[categoria]
 
