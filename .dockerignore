@@ -1,2 +1,41 @@
-# Ignora toda a pasta tests
+# Diretórios de código de teste
 tests/
+docs/
+
+# -------------------------------
+# Ignorar QUALQUER pasta __pycache__ em qualquer nível
+**/__pycache__/
+
+# Ignorar quaisquer arquivos .pyc/.pyo/.pyd em qualquer nível
+**/*.pyc
+**/*.pyo
+**/*.pyd
+
+# Ambientes virtuais (locais)
+venv/
+env/
+.virtualenv/
+
+# Logs e arquivos temporários
+logs/
+*.log
+pip-log.txt
+pip-delete-this-directory.txt
+*.swp
+*.swo
+
+# Configurações de IDE
+.idea/
+.vscode/
+
+# Arquivos sensíveis
+.env
+.env.local
+*.key
+*.crt
+secrets/
+config/local_settings.py
+
+# Git
+.git/
+.gitignore
